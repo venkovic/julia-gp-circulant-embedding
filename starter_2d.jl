@@ -68,6 +68,11 @@ function test_2d(n1::Int, n2::Int, L::T)
     end
   end
   K = Symmetric(Kupper)
+  println()
+  println("Is K really BTTB?")
+  println(norm2(K[1:n1-1, 1] - K[2:n1, 2]))
+  println(norm2(K[1:n1, 1:n1] - K[n1+1:2*n1, n1+1:2*n1]))
+  println(norm2(K[1:n1, n1+1:2*n1] - K[n1+1:2*n1, 2*n1+1:3*n1]))
   #
   # Assemble the reduced matrix form of the BCCB matrix which minimally embeds K
   Cred = Array{T}(undef, 2 * (n1 - 1),  2 * (n2 - 1))
@@ -81,6 +86,8 @@ function test_2d(n1::Int, n2::Int, L::T)
     end
   end
   hCred = fft(Cred, 2)
+  println(Cred[1:7, 1:7])
+  println(hCred)
   #
   q = rand(T, n)
   Kq = K * q
