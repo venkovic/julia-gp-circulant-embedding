@@ -70,7 +70,7 @@ test_1d(n, L)
 
 # module : MyToeplitzCovariances.jl
 # Data structure of covariance matrices for stationary Gaussian processes on
-# structured grids. Univariate 2D, 3D, (nD?), multivariate 1D. 
+# structured grids. Univariate 2D, 3D, (nD?), multivariate 1D.
 # Enables:
 #  - fast covariance matrix-vector products.
 #  - and other?

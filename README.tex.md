@@ -279,13 +279,15 @@ where the blocks $*_{n_1-2}$ and $\bullet_{2(n_2-2)(n_1-1)}$ are unnecessary byp
 
 
 $$
-\mathbf{C}(\mathbf{F}_{2(n_2-1)}\otimes\mathbf{F}_{2(n_2-1)})=
-\mathrm{diag}(\mathbf{b})(\mathbf{F}_{2(n_2-1)}\otimes\mathbf{F}_{2(n_2-1)})
+\mathbf{C}(\mathbf{F}_{2(n_2-1)}\otimes\mathbf{F}_{2(n_1-1)})=
+\mathrm{diag}(\mathbf{b})(\mathbf{F}_{2(n_2-1)}\otimes\mathbf{F}_{2(n_1-1)})
 \hspace{2cm}\mathrm{(9)}
 $$
 
 
+
 where the components $(F_n)_{1\leq i\leq n,\;1\leq j\leq n}:=\omega_n^{(i-1)(j-1)}$ of the Fourier matrix $\mathbf{F}_n\in\mathbb{R}^{n\times n}$ are defined with
+
 
 
 $$
@@ -298,23 +300,24 @@ as in Van Loan (1992). In Eq. (9), we have
 
 
 $$
-\mathbf{b}:=(\mathbf{F}_{2(n_2-1)}\otimes\mathbf{F}_{2(n_2-1)})\mathbf{C}\mathbf{e}_1=
+\mathbf{b}:=(\mathbf{F}_{2(n_2-1)}\otimes\mathbf{F}_{2(n_1-1)})\mathbf{C}\mathbf{e}_1=
 \mathbf{DFT}_2[\mathbf{array}(\mathbf{C}\mathbf{e}_1)].
 \hspace{2cm}\mathrm{(11)}
 $$
- 
+
 
 Then, for all $4(n_1-1)(n_2-1)$-dimensional vectors $\mathbf{h}$, we can compute $\mathbf{Ch}$ by the following procedure;
 
 
 $$
 \begin{align*}
-&1.\;\;\mathbf{B}:=\mathbf{DFT}_2[\mathbf{array}(\mathbf{C}\mathbf{e}_1)]\\
+&1.\;\;\mathrm{Assemble}\; \mathbf{B}\; \mathrm{with\ components}\; B_{1\leq i\leq n_1,\, 1\leq j\leq n_2}:=k(\mathbf{x}_1,\mathbf{x}_{(j-1)n_1+i})\\
+&1.\;\;\mathbf{B}:=\mathbf{DFT}_2[\mathbf{B}]\\
 &2.\;\;\mathrm{for\ all}\; \mathbf{h}\;:\\
 &\hspace{.6cm}2.1.\;\;\mathbf{H}:=\mathbf{array}(\mathbf{h})\\
 &\hspace{.6cm}2.2.\;\;\mathbf{H}:=\mathbf{DFT}_2(\mathbf{H})\\
 &\hspace{.6cm}2.3.\;\;\mathbf{H}:=\mathbf{H}\circ\mathbf{B}\\
-&\hspace{.6cm}2.3.\;\;\mathbf{H}:=\mathbf{IDFT}_2(\mathbf{H})\\
+&\hspace{.6cm}2.4.\;\;\mathbf{H}:=\mathbf{IDFT}_2(\mathbf{H})\\
 &3.\;\;\mathrm{return}\; \mathbf{vec}(\mathbf{H})
 \end{align*}
 $$

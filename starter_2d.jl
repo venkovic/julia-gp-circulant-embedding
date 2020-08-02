@@ -1,4 +1,4 @@
-using LinearAlgebra: norm2, Symmetric
+using LinearAlgebra: norm2, Symmetric, isposdef
 using FFTW
 
 const T = Float64
@@ -55,15 +55,24 @@ function test_2d(n1::Int, n2::Int, L::T)
   end
   n = n1 * n2
   Kupper = Array{T}(undef, n, n)
+  #y1, y2 = [x1[1], x2[1]], zeros(T, 2)
+  #for i in 1:n1
+  #  for j in 1:n2
+  #    y2 = [x1[i], x2[j]]
+  #    Kupper[i, j] = cov(y1, y2, L)
+  #  end
+  #end
   y1, y2 = zeros(T, 2), zeros(T, 2)
   for k in 1:n
     for l in k:n
       j1 = div(k - 1, n1) + 1
       i1 = k - (j1 - 1) * n1
+      y1 = [x1[i1], x2[j1]]
+      #
       j2 = div(l - 1, n1) + 1
       i2 = l - (j2 - 1) * n1
-      y1 = [x1[i1], x2[j1]]
       y2 = [x1[i2], x2[j2]]
+      #
       Kupper[k, l] = cov(y1, y2, L)
     end
   end
@@ -82,12 +91,16 @@ function test_2d(n1::Int, n2::Int, L::T)
       Cred[2 * (n1 - 1) - i + 2, j] = Cred[i, j]
     end
     if (1 < j) && (j < n2)
-      Cred[:, 2 * (n1 - 1) - j + 2] = Cred[:, j]
+      Cred[:, 2 * (n2 - 1) - j + 2] = Cred[:, j]
     end
   end
-  hCred = fft(Cred, 2)
-  println(Cred[1:7, 1:7])
+  hCred = fft(Cred, 2) #/ sqrt(4 * (n2 - 1) * (n1 - 1))
   println(hCred)
+  println(isposdef(Cred))
+  println()
+  println("hCred should be diagonal:")
+  println(hCred[1:4, 1:4])
+
   #
   q = rand(T, n)
   Kq = K * q
