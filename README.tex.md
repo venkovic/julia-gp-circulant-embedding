@@ -1,8 +1,6 @@
 ## MyToeplitzCovariance.jl
 
-##### Julia code of ***.
-
-Goal: Circulant embedding of Toeplitz and BTTB matrices for fast covariance matrix-vector products and simulation.
+##### Julia code to enable fast and low storage matrix-vector products with covariance matrices of stationary Gaussian processes.
 
 Author: Nicolas Venkovic.
 
@@ -22,6 +20,8 @@ email: venkovic@gmail.com.
 __Minimal circulant embedding of covariance matrices of 1D stationary processes__
 
 In 1D, this *.
+
+
 
 __Minimal circulant embedding of covariance matrices of 2D stationary processes__
 
@@ -248,7 +248,17 @@ __Minimal circulant embedding of covariance matrices of multivariate stationary 
 
 #### Running examples: 
 
+1D Example
 
+```bash
+julia starter.jl
+```
+
+2D Example
+
+```bash
+julia starter_2d.jl
+```
 
 
 
