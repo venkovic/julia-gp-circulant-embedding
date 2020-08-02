@@ -95,10 +95,12 @@ where the blocks <img src="/tex/892427b024f10b6ad997a062853ffa1b.svg?invert_in_d
 
 
 
-<p align="center"><img src="/tex/4065ab52df47fdc21125d8ac574888c5.svg?invert_in_darkmode&sanitize=true" align=middle width=513.1709979pt height=18.17354385pt/></p>
+<p align="center"><img src="/tex/33ed785772cf146df5c5fa7426dae09e.svg?invert_in_darkmode&sanitize=true" align=middle width=513.1709979pt height=18.17354385pt/></p>
+
 
 
 where the components <img src="/tex/40642dc37e9cf94c12bdd68e52bdfdd4.svg?invert_in_darkmode&sanitize=true" align=middle width=224.24277150000003pt height=34.337843099999986pt/> of the Fourier matrix <img src="/tex/3120000f5688c1807b25cc1239d8737d.svg?invert_in_darkmode&sanitize=true" align=middle width=79.33223265pt height=26.17730939999998pt/> are defined with
+
 
 
 <p align="center"><img src="/tex/9589448f638e981117d0e9f3804cde64.svg?invert_in_darkmode&sanitize=true" align=middle width=263.38665375pt height=39.452455349999994pt/></p>
@@ -107,13 +109,13 @@ where the components <img src="/tex/40642dc37e9cf94c12bdd68e52bdfdd4.svg?invert_
 as in Van Loan (1992). In Eq. (9), we have
 
 
-<p align="center"><img src="/tex/e8596d5889ffebe3d743f976850d518a.svg?invert_in_darkmode&sanitize=true" align=middle width=512.81988615pt height=18.17354385pt/></p>
- 
+<p align="center"><img src="/tex/6f41d5d390046121de57e5bdae04f03d.svg?invert_in_darkmode&sanitize=true" align=middle width=512.81988615pt height=18.17354385pt/></p>
+
 
 Then, for all <img src="/tex/b3c7d448fba6b4a3029b06b6aea5e689.svg?invert_in_darkmode&sanitize=true" align=middle width=124.89355065pt height=24.65753399999998pt/>-dimensional vectors <img src="/tex/f964f74151485ed723d54cb92c0d7a30.svg?invert_in_darkmode&sanitize=true" align=middle width=10.502226899999991pt height=22.831056599999986pt/>, we can compute <img src="/tex/502e9be8b959405c1facad8e29b7bff5.svg?invert_in_darkmode&sanitize=true" align=middle width=24.15512384999999pt height=22.831056599999986pt/> by the following procedure;
 
 
-<p align="center"><img src="/tex/3eb447e5d60d6bf4194b724e11e332b5.svg?invert_in_darkmode&sanitize=true" align=middle width=204.04024245pt height=164.38356165pt/></p>
+<p align="center"><img src="/tex/fe389bc61bf31b4861ad8629447b80a1.svg?invert_in_darkmode&sanitize=true" align=middle width=498.14825774999997pt height=189.04109565pt/></p>
 
 
 where <img src="/tex/c0463eeb4772bfde779c20d52901d01b.svg?invert_in_darkmode&sanitize=true" align=middle width=8.219209349999991pt height=14.611911599999981pt/> refers to the Hadamard product.
