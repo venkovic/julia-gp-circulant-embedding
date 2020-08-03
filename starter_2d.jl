@@ -130,9 +130,9 @@ function test_2d(n1::Int, n2::Int, L::T)
   println(norm2(Kq))
 end
 
-const n1 = 6
-const n2 = 9
-const L = .1
+const n1 = 10
+const n2 = 10
+const L = .5
 test_2d(n1, n2, L)
 
 

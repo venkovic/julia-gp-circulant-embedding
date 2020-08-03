@@ -325,6 +325,10 @@ $$
 
 where $\circ$ refers to the Hadamard product.
 
+
+
+*Explain conditions under which $\mathbf{C}$ is SPD, see Dietrich and Newsam (1997).*
+
 As a result, for all $\mathbf{q}\in\mathbb{R}^{n_1n_2}$, the matrix-vector product $\mathbf{K}\mathbf{q}$ is computed at a cost of O($\log(n_1n_2)n_1n_2$) instead of O($n_1^2n_2^2$), while only using O($n_1n_2$) of memory to store the essential information about $\mathbf{K}$. 
 
 
@@ -352,6 +356,7 @@ julia starter_2d.jl
 #### References:
 
 - **Anitescu, M.; Chen, J. & Wang, L.** (2012) **A matrix-free approach for solving the parametric Gaussian process maximum likelihood problem**, SIAM Journal on Scientific Computing, SIAM, 34, A240-A262.
+- **Dietrich, C. R. & Newsam, G. N.** (1997) **Fast and exact simulation of stationary Gaussian processes through circulant embedding of the covariance matrix**, SIAM Journal on Scientific Computing, SIAM, 18, 1088-1107.
 - **Lord, G. J.; Powell, C. E. & Shardlow**, T. (2014) **An introduction to computational stochastic PDEs**, Cambridge University Press, 50.  
 - **Golub, G. & Van Loan, C.** (2013) **Matrix Computations**, Johns Hopkins University Press.  
 - **Van Loan, C.** (1992) **Computational frameworks for the fast Fourier transform**, SIAM.
