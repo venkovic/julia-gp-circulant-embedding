@@ -120,6 +120,10 @@ Then, for all <img src="/tex/b3c7d448fba6b4a3029b06b6aea5e689.svg?invert_in_dark
 
 where <img src="/tex/c0463eeb4772bfde779c20d52901d01b.svg?invert_in_darkmode&sanitize=true" align=middle width=8.219209349999991pt height=14.611911599999981pt/> refers to the Hadamard product.
 
+
+
+*Explain conditions under which <img src="/tex/12d3ebda1a212bd89197298f60cf3ce1.svg?invert_in_darkmode&sanitize=true" align=middle width=13.652895299999988pt height=22.55708729999998pt/> is SPD, see Dietrich and Newsam (1997).*
+
 As a result, for all <img src="/tex/214a2cc1d1a8bc2d81b64dc1fbc0f7f7.svg?invert_in_darkmode&sanitize=true" align=middle width=70.20179264999999pt height=22.648391699999998pt/>, the matrix-vector product <img src="/tex/42d793b53196095b787a5e3c45d2b302.svg?invert_in_darkmode&sanitize=true" align=middle width=24.79439324999999pt height=22.55708729999998pt/> is computed at a cost of O(<img src="/tex/59ebe596a9e26f55cbbb7a89453914b2.svg?invert_in_darkmode&sanitize=true" align=middle width=102.16177619999998pt height=24.65753399999998pt/>) instead of O(<img src="/tex/2cc4fcc186a362cff729530b5f9318eb.svg?invert_in_darkmode&sanitize=true" align=middle width=33.66075899999999pt height=26.76175259999998pt/>), while only using O(<img src="/tex/4b2b6901bd751903eef2b8b5a21b82f6.svg?invert_in_darkmode&sanitize=true" align=middle width=33.66075899999999pt height=14.15524440000002pt/>) of memory to store the essential information about <img src="/tex/558e1b6b0d61666c16dd87622253a301.svg?invert_in_darkmode&sanitize=true" align=middle width=14.817277199999989pt height=22.55708729999998pt/>. 
 
 
@@ -147,6 +151,7 @@ julia starter_2d.jl
 #### References:
 
 - **Anitescu, M.; Chen, J. & Wang, L.** (2012) **A matrix-free approach for solving the parametric Gaussian process maximum likelihood problem**, SIAM Journal on Scientific Computing, SIAM, 34, A240-A262.
+- **Dietrich, C. R. & Newsam, G. N.** (1997) **Fast and exact simulation of stationary Gaussian processes through circulant embedding of the covariance matrix**, SIAM Journal on Scientific Computing, SIAM, 18, 1088-1107.
 - **Lord, G. J.; Powell, C. E. & Shardlow**, T. (2014) **An introduction to computational stochastic PDEs**, Cambridge University Press, 50.  
 - **Golub, G. & Van Loan, C.** (2013) **Matrix Computations**, Johns Hopkins University Press.  
 - **Van Loan, C.** (1992) **Computational frameworks for the fast Fourier transform**, SIAM.
