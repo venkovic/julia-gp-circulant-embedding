@@ -1,6 +1,6 @@
-module MyCovariances
+module MyCorrelations
 
-export sexp_1d, exp_1d, mattern_1d
+export sexp_1d, exp_1d#, mattern_1d
 #export sexp_2d, exp_2d, mattern_2d
 
 const T = Float64
